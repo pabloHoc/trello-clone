@@ -5,7 +5,7 @@ import './Column.scss'
 
 const Column = props => (
     <div className='column'>
-        <p>{props.title}</p>
+        <p className='title'>{props.title}</p>
         {
             props.cards.map(card => <Card 
                 key={card.id}

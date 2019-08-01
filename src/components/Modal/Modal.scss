@@ -1,0 +1,28 @@
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    display: flex;
+    justify-content: center;
+
+    .modal {
+        background-color: #f4f5f7;
+        border-radius: 2px;
+        width: 600px;
+        height: 500px;
+        margin-top: 20px;
+
+        .buttons-container {
+            width: 168px;
+        }
+
+        .comments-list {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+}

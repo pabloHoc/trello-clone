@@ -4,17 +4,20 @@ import AddColumn from 'components/AddColumn/AddColumn';
 import columns from 'data'
 import './Dashboard.scss'
 
-const Dashboard = () => (
+const Dashboard = props => (
     <div className='dashboard'>
-        {
-            // js
-            columns.map(column => <Column 
-                key={column.id}
-                title={column.title}
-                cards={column.cards}
-            />)
-        }        
-    <AddColumn />    
+        <h2 className='title'>{props.title}</h2>
+        <div className='columns'>
+            {
+                // js
+                columns.map(column => <Column 
+                    key={column.id}
+                    title={column.title}
+                    cards={column.cards}
+                />)
+            }        
+            <AddColumn />    
+        </div>
     </div>
 )
 

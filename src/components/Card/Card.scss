@@ -1,0 +1,26 @@
+@import 'styles/abstract/colors';
+@import 'styles/abstract/effects';
+
+.card {
+    border-radius: 5px;
+    background-color: white;
+    color: $primary-font-color;
+    margin: 8px 0;
+    padding: 8px 12px;
+    cursor: pointer;
+    @include box-shadow;
+    
+    p {
+        word-break: break-all;
+        font-size: 12px;
+    }
+
+    .tags {
+        display: flex;
+        margin-bottom: 10px;
+    }
+}
+
+.card:hover {
+    background-color: #f4f5f7;
+}
