@@ -1,0 +1,12 @@
+.card {
+    background: white;
+    margin: 10px;
+    border-radius: 5px;
+    min-height: 50px;
+    padding: 5px 10px;
+
+    .tags {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+}
