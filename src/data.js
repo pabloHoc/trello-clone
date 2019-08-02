@@ -10,18 +10,16 @@ const columns = [
                 id: uuid(),
                 title: 'Hacer componentes con map',
                 text: 'lalala',
-                tags: [
-                    {
-                        id: uuid(),
-                        name: 'Maquetado',
-                        color: 'darkgreen'
-                    },
-                    {
-                        id: uuid(),
-                        name: 'Desarrollo',
-                        color: 'darkorange'
-                    }
-                ]
+                tags: [{
+                    id: uuid(),
+                    name: 'Maquetado',
+                    color: 'darkgreen'
+                },
+                {
+                    id: uuid(),
+                    name: 'Desarrollo',
+                    color: 'darkorange'
+                }]
             }
         ]
     },

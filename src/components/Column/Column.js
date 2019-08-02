@@ -11,7 +11,8 @@ const Column = props => (
                 key={card.id}
                 title={card.title} 
                 text={card.text}
-                tags={card.tags} 
+                tags={card.tags}
+                comments={card.comments}
             />)
         }
         <AddCard />   

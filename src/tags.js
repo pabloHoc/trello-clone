@@ -4,7 +4,7 @@ const tags = [
     {
         id: uuid(),
         name: 'Maquetado',
-        color: 'darkgreen'
+        color: 'red'
     },
     {
         id: uuid(),

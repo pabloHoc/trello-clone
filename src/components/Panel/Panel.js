@@ -12,7 +12,8 @@ const Panel = () => (
                 <Tag 
                     key={tag.id}
                     type={TAG_TYPES.BIG}
-                    {...tag}
+                    color={tag.color}
+                    name={tag.name}
                 /> 
                 )
             }

@@ -1,18 +1,20 @@
 import React from 'react'
 import './Tag.scss'
 
-const Tag = props => (
-    <div 
-        className={props.type}
-        style={{backgroundColor: props.color}}
+export const TAG_TYPES = {
+    SMALL: 'tag-small',
+    BIG: 'tag-big'
+}
+
+const Tag = ({type, color, name}) => (
+    <div
+        className={type} 
+        style={{backgroundColor: color}}
     >
-         {props.name}
+         {name}
     </div>
 )
 
-export const TAG_TYPES = {
-    BIG: 'tag-big',
-    SMALL: 'tag-small'
-}
-
 export default Tag
+
+
