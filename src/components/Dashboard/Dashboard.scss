@@ -17,7 +17,7 @@
         align-items: flex-start;    
 
         & > .add-input-control {
-            width: 270px;
+            min-width: 270px;
             background-color: rgb(235, 236, 240);
             border-radius: 5px;
             padding: 5px;
