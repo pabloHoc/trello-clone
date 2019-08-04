@@ -2,9 +2,12 @@ import React from 'react'
 import Tag, {TAG_TYPES} from 'components/Tag/Tag'
 import tags from 'tags'
 import './Panel.scss'
+import Button, { BUTTON_TYPES, BUTTON_SIZES } from 'components/Button/Button'
+import CloseButton from 'components/CloseButton/CloseButton'
 
 const Panel = () => (
     <div className='panel'>
+        <CloseButton />
         <p className='title'>Etiquetas</p>
         <div className='tags'>
             {
@@ -17,6 +20,12 @@ const Panel = () => (
                 /> 
                 )
             }
+            <Button
+                type={BUTTON_TYPES.DEFAULT}
+                size={BUTTON_SIZES.SHRINK} 
+                text='Crear una etiqueta nueva'
+                className='add-tag-btn'
+            />
         </div>
 
     </div>

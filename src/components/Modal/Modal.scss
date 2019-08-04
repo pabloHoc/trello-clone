@@ -1,20 +1,36 @@
 .overlay {
     background-color: rgba(0, 0, 0, 0.6);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
 
     .modal {
         background-color: #f4f5f7;
         border-radius: 2px;
         width: 600px;
-        height: 500px;
+        min-height: 500px;
         margin-top: 20px;
+        padding: 10px 20px;
+        position: relative;
 
+        .modal-body {
+            display: flex;
+
+            .main-content {
+                flex-grow: 1;
+                margin-right: 20px;
+
+                .control-section {
+                    margin-bottom: 25px;
+                }
+            }
+        }
+        
         .buttons-container {
             width: 168px;
         }

@@ -1,0 +1,9 @@
+@import 'styles/abstract/colors';
+
+.close-button {
+    color: $primary-font-color;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}

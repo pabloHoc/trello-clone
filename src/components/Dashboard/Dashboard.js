@@ -1,6 +1,6 @@
 import React from 'react'
 import Column from 'components/Column/Column'
-import AddColumn from 'components/AddColumn/AddColumn';
+import AddInputControl, {INPUT_ELEMENTS} from 'components/AddInputControl/AddInputControl';
 import columns from 'data'
 import './Dashboard.scss'
 
@@ -16,7 +16,11 @@ const Dashboard = props => (
                     cards={column.cards}
                 />)
             }        
-            <AddColumn />    
+            <AddInputControl 
+                inputElement={INPUT_ELEMENTS.TEXT}
+                placeholder='Introduzca un título para esta tarjeta'
+                buttonText='Añadir tarjeta'
+            />        
         </div>
     </div>
 )

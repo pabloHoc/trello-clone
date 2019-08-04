@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from 'components/Card/Card'
-import AddCard from 'components/AddCard/AddCard';
+import AddInputControl, {INPUT_ELEMENTS} from 'components/AddInputControl/AddInputControl'
 import './Column.scss'
 
 const Column = props => (
@@ -15,7 +15,11 @@ const Column = props => (
                 comments={card.comments}
             />)
         }
-        <AddCard />   
+        <AddInputControl 
+            inputElement={INPUT_ELEMENTS.TEXTAREA}
+            placeholder='Introduzca un título para esta tarjeta'
+            buttonText='Añadir tarjeta'
+        />   
     </div>
 )
 

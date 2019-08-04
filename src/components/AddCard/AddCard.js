@@ -1,6 +1,5 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCannabis, faAdjust } from '@fortawesome/free-solid-svg-icons'
+import Button, {BUTTON_TYPES} from 'components/Button/Button'
 import './AddCard.scss'
 
 const AddCard = () => (
@@ -11,13 +10,7 @@ const AddCard = () => (
                 placeholder='Introduzca un título para esta tarjeta'
             />
             <div>
-                <div className='add-card-button'>
-                    <FontAwesomeIcon 
-                        icon={faCannabis}
-                        color='red'
-                        spin/>
-                    Añadir tarjeta
-                </div>
+                <Button type={BUTTON_TYPES.PRIMARY} text='Añadir tarjeta' />
             </div>
         </div>
     </div>

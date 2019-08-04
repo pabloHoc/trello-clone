@@ -1,9 +1,14 @@
 import React from 'react'
 import './Comment.scss'
 
-const Comment = props => (
+const Comment = ({username, text}) => (
     <div className='comment'>
-        {props.text}
+        <b className='username'>{username}</b>
+        <div className='comment-text'>{text}</div>
+        <div className='comment-actions'>
+            <a href='#!' className='comment-action'>Editar</a>
+            <a href='#!' className='comment-action'>Eliminar</a>
+        </div>
     </div>
 )
 
