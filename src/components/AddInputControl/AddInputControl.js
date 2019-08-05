@@ -1,21 +1,18 @@
 import React from 'react'
 import Button, {BUTTON_TYPES, BUTTON_SIZES} from 'components/Button/Button'
 import './AddInputControl.scss'
+import TextInput from 'components/TextInput/TextInput';
 
 export const INPUT_ELEMENTS = {
     TEXT: 'text',
     TEXTAREA: 'textarea'
 }
 
-const AddInputControl = ({inputElement, placeholder, buttonType, buttonSize, buttonText}) => (
+const AddInputControl = ({inputElement = INPUT_ELEMENTS.TEXTAREA, placeholder, buttonType, buttonSize, buttonText}) => (
     <div className='add-input-control'>
         {
             inputElement === INPUT_ELEMENTS.TEXT &&
-            <input
-                type='text'
-                className='input' 
-                placeholder={placeholder}
-            />
+            <TextInput placeholder={placeholder} />
         }
         {
             inputElement === INPUT_ELEMENTS.TEXTAREA &&

@@ -1,21 +1,14 @@
 import React from 'react'
-import Column from 'components/Column/Column'
+import ColumnList from 'components/Lists/ColumnList/ColumnList'
 import AddInputControl, {INPUT_ELEMENTS} from 'components/AddInputControl/AddInputControl';
 import columns from 'data'
 import './Dashboard.scss'
 
-const Dashboard = props => (
+const Dashboard = ({title}) => (
     <div className='dashboard'>
-        <h2 className='title'>{props.title}</h2>
+        <h2 className='title'>{title}</h2>
         <div className='columns'>
-            {
-                // js
-                columns.map(column => <Column 
-                    key={column.id}
-                    title={column.title}
-                    cards={column.cards}
-                />)
-            }        
+            <ColumnList columns={columns} />        
             <AddInputControl 
                 inputElement={INPUT_ELEMENTS.TEXT}
                 placeholder='Introduzca un título para esta tarjeta'

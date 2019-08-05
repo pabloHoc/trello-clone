@@ -18,23 +18,6 @@
         padding: 10px 20px;
         position: relative;
 
-        .modal-body {
-            display: flex;
-
-            .main-content {
-                flex-grow: 1;
-                margin-right: 20px;
-
-                .control-section {
-                    margin-bottom: 25px;
-                }
-            }
-        }
-        
-        .buttons-container {
-            width: 168px;
-        }
-
         .comments-list {
             display: flex;
             flex-direction: column;

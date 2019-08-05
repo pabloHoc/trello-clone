@@ -8,6 +8,7 @@
     margin: 8px 0;
     padding: 8px 12px;
     cursor: pointer;
+    position: relative;
     @include box-shadow;
     
     p {
@@ -17,10 +18,27 @@
 
     .tags {
         display: flex;
+        padding: 0;
 
         .tag {
             margin-bottom: 10px;
         }
+    }
+
+    .overlay {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        z-index: 999;
+        background-color: rgba(0, 0, 0, .6);
+    }
+
+    .control {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 9999;
     }
 }
 

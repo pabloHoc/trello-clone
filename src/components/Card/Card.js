@@ -1,23 +1,15 @@
 import React from 'react'
-import Tag, {TAG_TYPES} from 'components/Tag/Tag'
+import TagList from 'components/Lists/TagList/TagList'
+import {TAG_TYPES} from 'components/Tag/Tag'
 import './Card.scss'
 
-const Card = ({tags, title, text}) => (
+const Card = ({tags, title}) => (
     <div className='card'>
         <div className='tags'>
-            {
-                tags.map(tag => 
-                <Tag 
-                    key={tag.id}
-                    type={TAG_TYPES.SMALL}
-                    color={tag.color}
-                    name={tag.name}
-                /> 
-                )
-            }
+            <TagList tags={tags} tagType={TAG_TYPES.SMALL} />
         </div>
         <p>{title}</p>
     </div>
-);
+)
  
-export default Card;
+export default Card

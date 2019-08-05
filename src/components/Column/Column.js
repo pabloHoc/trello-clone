@@ -1,20 +1,12 @@
 import React from 'react'
-import Card from 'components/Card/Card'
 import AddInputControl, {INPUT_ELEMENTS} from 'components/AddInputControl/AddInputControl'
+import CardList from 'components/Lists/CardList/CardList';
 import './Column.scss'
 
-const Column = props => (
+const Column = ({title, cards}) => (
     <div className='column'>
-        <p className='title'>{props.title}</p>
-        {
-            props.cards.map(card => <Card 
-                key={card.id}
-                title={card.title} 
-                text={card.text}
-                tags={card.tags}
-                comments={card.comments}
-            />)
-        }
+        <p className='title'>{title}</p>
+        <CardList cards={cards} />
         <AddInputControl 
             inputElement={INPUT_ELEMENTS.TEXTAREA}
             placeholder='Introduzca un título para esta tarjeta'
