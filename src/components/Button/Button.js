@@ -14,11 +14,21 @@ export const BUTTON_SIZES = {
     ICON: 'icon'
 }
 
-const Button = ({text, icon, type, size, className}) => (
-    <div className={`button ${className || ''} ${type || BUTTON_TYPES.DEFAULT} ${size || BUTTON_SIZES.SHRINK}`}>
+const Button = ({
+    text, 
+    icon, 
+    type = BUTTON_TYPES.DEFAULT, 
+    size = BUTTON_SIZES.SHRINK, 
+    className = '', 
+    onClick}) => (
+    <div className={`button ${className} ${type} ${size}`} onClick={onClick} >
         {
             icon && 
-            <FontAwesomeIcon icon={icon} className='button-icon' />
+            <FontAwesomeIcon 
+                icon={icon} 
+                className='button-icon'
+                
+            />
         }
         {text}
     </div>

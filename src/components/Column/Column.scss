@@ -4,12 +4,46 @@
     min-width: 250px;
     border-radius: 5px;
     background-color: #dfe1e6;
-    padding: 5px 8px;
     margin: 0 5px;
-
+    
     .title {
+        padding: 5px 8px;
         color: $primary-font-color;
         font-weight: bold;
         padding: 6px 10px;
+    }
+
+    .add-input-control {
+        padding: 5px 8px;
+    }
+
+    .card {
+        margin-right: 8px;
+        margin-left: 8px;
+    }
+
+    .add-card-toggle {
+        border-radius: 0 0 3px 3px;
+        color: #6b778c;
+        display: block;
+        flex: 0 0 auto;
+        padding: 8px;
+        position: relative;
+        text-decoration: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba(9,30,66,.13);
+            color: #172b4d;
+            text-decoration: underline;
+        }
+
+        .fa-plus {
+            margin-right: 5px;
+        }
     }
 }

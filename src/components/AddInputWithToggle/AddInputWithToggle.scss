@@ -39,4 +39,11 @@
         height: 54px;
         font-family: inherit;
     }
+
+    .close-button-toggle {
+        font-size: 20px;
+        transform: translateY(2px);
+        cursor: pointer;
+        margin-left: 10px;
+    }
 }

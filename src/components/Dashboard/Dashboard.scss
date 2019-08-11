@@ -24,5 +24,21 @@
             margin: 0 5px;
         }
     }
+    .add-column-toggle {
+        background-color: rgba(0,0,0,.12);
+        padding: 6px 8px;
+        color: #FFF;
+        transition: background 85ms ease-in,opacity 40ms ease-in,border-color 85ms ease-in;
+        cursor: pointer;
+        border-radius: 3px;
+        width: 272px;
 
+        &:hover {
+            background-color: rgba(0,0,0,.24);
+        }
+
+        .fa-plus {
+            margin-right: 5px;
+        }
+    }
 }

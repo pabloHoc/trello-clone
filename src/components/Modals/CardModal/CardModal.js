@@ -9,31 +9,28 @@ import TitleWithIcon, {TITLE_SIZE} from 'components/TitleWithIcon/TitleWithIcon'
 import CommentList from 'components/Lists/CommentList/CommentList'
 import './CardModal.scss'
 
-const comments = [
-    {
-        id: 1,
-        text: 'asdasd',
-        username: 'Ada Lovelace'
-    },
-    {
-        id: 2,
-        text: 'asdasd',
-        username: 'Ada Lovelace'
-    }
-]
-
-const EditCardModal = () => (
-    <Modal>
+const CardModal = ({
+    onClose,
+    description,
+    comments,
+    onEditDescription,
+    onAddComment}) => (
+    <Modal onClose={onClose}>
         <div className='modal-header'>
             <TitleWithIcon icon={faStickyNote} title='Titulo' size={TITLE_SIZE.BIG} />
         </div>
         <div className='modal-body'>
             <div className='main-content'>
                 <div className='control-section'>
-                    <CardModalDescription />
+                    <CardModalDescription 
+                        description={description}
+                        onEditDescription={onEditDescription}
+                    />
                 </div>
                 <div className='control-section'>
-                    <CardModalAddComment />
+                    <CardModalAddComment 
+                        onAddComment={onAddComment}
+                    />
                 </div>    
                 <div className='control-section'> 
                     <TitleWithIcon icon={faList} title='Actividad' size={TITLE_SIZE.MEDIUM} />
@@ -45,4 +42,4 @@ const EditCardModal = () => (
     </Modal>
 )
 
-export default EditCardModal
+export default CardModal

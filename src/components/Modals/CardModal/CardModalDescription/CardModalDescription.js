@@ -1,19 +1,23 @@
 import React from 'react'
 import {faAlignLeft} from '@fortawesome/free-solid-svg-icons'
 import TitleWithIcon, {TITLE_SIZE} from 'components/TitleWithIcon/TitleWithIcon'
-import AddInputControl, {INPUT_ELEMENTS} from 'components/AddInputControl/AddInputControl'
+import AddInputWithToggle from 'components/AddInputWithToggle/AddInputWithToggle'
 import {BUTTON_TYPES, BUTTON_SIZES} from 'components/Button/Button'
+import './CardModalDescription.scss';
 
-const CardModalDescription = () => (
+const CardModalDescription = ({description, onEditDescription}) => (
     <>
         <TitleWithIcon icon={faAlignLeft} title='Descripción' size={TITLE_SIZE.MEDIUM} />
-        <AddInputControl 
-            inputElement={INPUT_ELEMENTS.TEXTAREA}
+        <AddInputWithToggle 
+            type='textarea'
             placeholder='Introduzca una descripción'
             buttonType={BUTTON_TYPES.PRIMARY}
             buttonSize={BUTTON_SIZES.SHRINK}
             buttonText='Editar descripción'
-        />
+            onAddValue={onEditDescription}
+        >
+            <div className='description-box'>{description || 'Añadir una descripción más detallada...'}</div>
+        </AddInputWithToggle>
     </>
 )
 

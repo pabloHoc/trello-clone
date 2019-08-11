@@ -3,9 +3,9 @@ import './Panel.scss'
 import CloseButton from 'components/CloseButton/CloseButton'
 import TagSelection from 'components/TagSelection/TagSelection';
 
-const Panel = () => (
+const Panel = ({onClose}) => (
     <div className='panel'>
-        <CloseButton />
+        <CloseButton onClose={onClose} />
         <p className='title'>Etiquetas</p>
         <TagSelection />
     </div>

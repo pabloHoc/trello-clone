@@ -1,7 +1,8 @@
 import React from 'react'
 import './Navbar.scss'
 import Button, { BUTTON_SIZES, BUTTON_TYPES } from 'components/Button/Button';
-import {faHome, faChalkboard, faBars} from '@fortawesome/free-solid-svg-icons'
+import {faHome, faChalkboard} from '@fortawesome/free-solid-svg-icons'
+import MenuButton from 'components/MenuButton/MenuButton'
 
 const Navbar = () => (
     <div className='navbar'>
@@ -18,11 +19,7 @@ const Navbar = () => (
                 text='Tableros' 
             />
         </div>
-        <Button 
-            type={BUTTON_TYPES.LIGHT} 
-            size={BUTTON_SIZES.ICON} 
-            icon={faBars} 
-        />
+        <MenuButton />
     </div>
 )
 

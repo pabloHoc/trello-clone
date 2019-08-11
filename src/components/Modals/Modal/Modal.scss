@@ -8,7 +8,8 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-
+    z-index: 999;
+    
     .modal {
         background-color: #f4f5f7;
         border-radius: 2px;
