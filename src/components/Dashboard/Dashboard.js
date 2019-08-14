@@ -19,7 +19,7 @@ class Dashboard extends React.Component {
             <div className='dashboard'>
                 <h2 className='title'>{title}</h2>
                 <div className='columns'>
-                    <ColumnList columns={this.state.columns} />        
+                    <ColumnList columns={this.state.columns} />    
                     <AddInputWithToggle 
                         type='text'
                         placeholder='Introduzca un título de la lista'
