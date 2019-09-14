@@ -1,7 +1,12 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import Card from 'components/Card/Card'
 
-const CardList = ({cards}) => (
+const mapStateToProps = (state, props) => {
+    return { cards: state.cards.filter(card => card.columnId === props.columnId) }
+}
+
+const ConnectedCardList = ({cards, columnId}) => (
     cards.map(card => <Card 
         key={card.id}
         title={card.title} 
@@ -10,5 +15,7 @@ const CardList = ({cards}) => (
         comments={card.comments}
     />)
 )
+
+const CardList = connect(mapStateToProps)(ConnectedCardList)
 
 export default CardList

@@ -1,6 +1,6 @@
 import React from 'react'
 import TagList from 'components/Lists/TagList/TagList'
-import {TAG_TYPES} from 'components/Tag/Tag'
+import {TAG_SIZES} from 'components/Tag/Tag'
 import CardModal from 'components/Modals/CardModal/CardModal'
 import Comment from 'models/Comment'
 import './Card.scss'
@@ -29,7 +29,7 @@ class Card extends React.Component {
             <>
                 <div className='card' onClick={this.openModal}>
                     <div className='tags'>
-                        <TagList tags={tags} tagType={TAG_TYPES.SMALL} />
+                        <TagList tags={tags} size={TAG_SIZES.SMALL} />
                     </div>
                     <p>{title}</p>
                 </div>

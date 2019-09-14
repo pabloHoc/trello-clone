@@ -1,17 +1,22 @@
 import React from 'react'
+import { connect } from "react-redux"
 import ColumnList from 'components/Lists/ColumnList/ColumnList'
 import AddInputWithToggle from 'components/AddInputWithToggle/AddInputWithToggle';
 import Column from 'models/Column'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faPlus} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import { addColumn } from "js/actions"
 import './Dashboard.scss'
 
-class Dashboard extends React.Component {
-    state = {
-        columns: []
-    }
+const mapDispatchToProps = dispatch => {
+  return {
+    addColumn: column => dispatch(addColumn(column))
+  };
+}
+
+class ConnectedDashboard extends React.Component {
     addColumn = title => {
-        this.setState({ columns: [...this.state.columns, new Column(title)]})
+        this.props.addColumn(new Column(title))
     }
     render() {
         const {title} = this.props
@@ -19,7 +24,7 @@ class Dashboard extends React.Component {
             <div className='dashboard'>
                 <h2 className='title'>{title}</h2>
                 <div className='columns'>
-                    <ColumnList columns={this.state.columns} />    
+                    <ColumnList />    
                     <AddInputWithToggle 
                         type='text'
                         placeholder='Introduzca un título de la lista'
@@ -36,5 +41,7 @@ class Dashboard extends React.Component {
         )
     }   
 }
+
+const Dashboard = connect(null, mapDispatchToProps)(ConnectedDashboard);
 
 export default Dashboard

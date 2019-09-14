@@ -1,9 +1,8 @@
 import React from 'react'
-import './Textarea.scss'
+import * as Styled from './styled'
 
 const Textarea = ({placeholder, value, onChange}) => (
-    <textarea 
-        className='textarea-input'
+    <Styled.Textarea 
         placeholder={placeholder}
         value={value}
         onChange={onChange}

@@ -1,15 +1,14 @@
-import React from 'react';
-import Dashboard from 'components/Dashboard/Dashboard'
-import Navbar from 'components/Navbar/Navbar'
-import PanelContextProvider from 'components/Contexts/PanelContext'
-import Panel from 'components/Panel/Panel'
+import React from 'react'
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import Home from 'views/Home'
+import DashboardView from 'views/DashboardView'
 
-const App = () => ( 
-    <PanelContextProvider>
-      <Navbar />
-      <Dashboard title='Mi tablero' />
-      <Panel />
-    </PanelContextProvider>
+const App = () => (
+    <DashboardView />
+  // <Router>
+  //     <Route path='/home' component={Home} />
+  //     <Route path='/dashboard' component={DashboardView} />
+  // </Router> 
 )
 
 export default App

@@ -1,8 +1,8 @@
-@import 'styles/abstract/colors';
+import styled from 'styled-components'
 
-.textarea-input {
+export const Textarea = styled.textarea`
     width: 100%;
-    color: $primary-font-color;
+    color: ${({theme}) => theme.primaryFontColor};
     box-sizing: border-box;
     -webkit-appearance: none;
     border-radius: 3px;
@@ -19,4 +19,4 @@
     resize: none;
     height: 54px;
     font-family: inherit;
-}
+`

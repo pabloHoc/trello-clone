@@ -1,18 +1,18 @@
 import React from 'react'
-import './Tag.scss'
+import * as Styled from './styled'
 
-export const TAG_TYPES = {
-    SMALL: 'tag-small',
-    BIG: 'tag-big'
+export const TAG_SIZES = {
+    SMALL: 'small',
+    BIG: 'big'
 }
 
-const Tag = ({type, color, name}) => (
-    <div
-        className={type} 
-        style={{backgroundColor: color}}
+const Tag = ({size, color, name}) => (
+    <Styled.TagWrapper
+        size={size} 
+        color={color}
     >
-         {name}
-    </div>
+        {name}
+    </Styled.TagWrapper>
 )
 
 export default Tag

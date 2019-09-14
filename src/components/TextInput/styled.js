@@ -1,6 +1,6 @@
-@import 'styles/abstract/colors';
+import styled from 'styled-components'
 
-.text-input-label {
+export const Label = styled.label`
     font-weight: 700;
     color: #6b778c;
     font-size: 12px;
@@ -8,9 +8,9 @@
     margin-top: 12px;
     margin-bottom: 6px;
     display: block;
-}
+`
 
-.text-input {
+export const Input = styled.input`
     background: #fff;
     border: none;
     box-shadow: inset 0 0 0 2px #0079bf;
@@ -18,10 +18,10 @@
     margin: 0;
     transition: margin 85ms ease-in,background 85ms ease-in;
     width: 100%;
-    color: $primary-font-color;
+    color: ${({theme}) => theme.primaryFontColor};
     box-sizing: border-box;
     -webkit-appearance: none;
     border-radius: 3px;
     line-height: 20px;
     padding: 8px 12px;
-}
+`

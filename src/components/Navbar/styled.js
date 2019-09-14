@@ -1,4 +1,6 @@
-.navbar {
+import styled from 'styled-components'
+
+export const NavbarWrapper = styled.nav`
     height: 40px;
     background-color: rgba(0, 0, 0, 0.2);
     display: flex;
@@ -10,8 +12,8 @@
     width: 100%;
     box-sizing: border-box;
     z-index: 99;
-    
-    .left-buttons {
-        display: flex;
-    }
-}
+`
+
+export const FlexWrapper = styled.div`
+    display: flex;
+`

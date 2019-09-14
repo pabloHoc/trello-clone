@@ -1,14 +1,13 @@
 import React from 'react'
 import Button, {BUTTON_TYPES, BUTTON_SIZES} from 'components/Button/Button'
-import TextInput from 'components/TextInput/TextInput'
 import Textarea from 'components/Textarea/Textarea'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
-import './AddInputWithToggle.scss'
+import * as Styled from './styled'
 
 const INPUT_ELEMENTS = {
-    text: TextInput,
-    textarea: Textarea
+    text: Styled.StyledTextInput,
+    textarea: Styled.StyledTextarea
 }
 
 class AddInputWithToggle extends React.Component {
@@ -40,13 +39,13 @@ class AddInputWithToggle extends React.Component {
             <>
                 {
                     this.state.toggle || !hasToggle?
-                    <div className='add-input-control'>
+                    <Styled.Wrapper>
                         <InputElement 
                             placeholder={placeholder}
                             value={this.state.value}
                             onChange={this.onChange} 
                         />
-                        <div>
+                        <Styled.FlexWrapper>
                             <Button 
                                 type={buttonType} 
                                 size={buttonSize} 
@@ -55,18 +54,19 @@ class AddInputWithToggle extends React.Component {
                             />
                             {
                                 hasToggle &&
-                                <FontAwesomeIcon 
-                                    icon={faTimes} 
-                                    className='close-button-toggle' 
-                                    onClick={this.toggle} 
-                                />
+                                <Styled.IconWrapper>
+                                    <FontAwesomeIcon 
+                                        icon={faTimes} 
+                                        onClick={this.toggle} 
+                                    />
+                                </Styled.IconWrapper>
                             }
-                        </div>
-                    </div>
+                        </Styled.FlexWrapper>
+                    </Styled.Wrapper>
                     :
-                    <div onClick={this.toggle}>
+                    <Styled.Wrapper onClick={this.toggle}>
                         {children}
-                    </div>
+                    </Styled.Wrapper>
                 }
             </>                
         )

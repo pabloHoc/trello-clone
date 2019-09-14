@@ -1,16 +1,18 @@
 import React from 'react'
-import './Navbar.scss'
 import Button, { BUTTON_SIZES, BUTTON_TYPES } from 'components/Button/Button'
 import { faHome, faChalkboard, faBars } from '@fortawesome/free-solid-svg-icons'
 import { PanelContextConsumer } from 'components/Contexts/PanelContext'
+import { withRouter } from 'react-router-dom'
+import * as Styled from './styled'
 
-const Navbar = () => (
-    <div className='navbar'>
-        <div className='left-buttons'>
+const Navbar = props => (
+    <Styled.NavbarWrapper>
+        <Styled.FlexWrapper>
             <Button 
                 type={BUTTON_TYPES.LIGHT} 
                 size={BUTTON_SIZES.ICON} 
-                icon={faHome} 
+                icon={faHome}
+                onClick={() => props.history.push('/home')} 
             />
             <Button 
                 type={BUTTON_TYPES.LIGHT} 
@@ -18,7 +20,7 @@ const Navbar = () => (
                 icon={faChalkboard}
                 text='Tableros' 
             />
-        </div>
+        </Styled.FlexWrapper>
         <PanelContextConsumer>
         {
             ({openPanel}) => (
@@ -31,7 +33,7 @@ const Navbar = () => (
             )
         }    
         </PanelContextConsumer>
-    </div>
+    </Styled.NavbarWrapper>
 )
 
 export default Navbar

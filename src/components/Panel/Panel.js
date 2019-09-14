@@ -1,19 +1,19 @@
 import React from 'react'
-import './Panel.scss'
 import CloseButton from 'components/CloseButton/CloseButton'
 import TagSelection from 'components/TagSelection/TagSelection'
 import { PanelContextConsumer } from 'components/Contexts/PanelContext'
+import * as Styled from './styled'
 
 const Panel = () => (
     <PanelContextConsumer>
         {
             ({panelVisible, closePanel}) => (
                 panelVisible &&
-                <div className='panel'>
+                <Styled.PanelWrapper>
                     <CloseButton onClose={closePanel} />
-                    <p className='title'>Etiquetas</p>
+                    <Styled.Title>Etiquetas</Styled.Title>
                     <TagSelection />
-                </div>
+                </Styled.PanelWrapper>
             )
         }
     </PanelContextConsumer>

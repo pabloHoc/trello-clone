@@ -1,5 +1,5 @@
 import React from 'react'
-import Tag, {TAG_TYPES} from 'components/Tag/Tag'
+import Tag, {TAG_SIZES} from 'components/Tag/Tag'
 import Button, { BUTTON_TYPES, BUTTON_SIZES } from 'components/Button/Button'
 import * as PopoverWrapper from 'react-awesome-popover'
 import TagEditionPopover, { TAG_ACTION } from 'components/Popovers/TagEditionPopover/TagEditionPopover'
@@ -14,7 +14,7 @@ const TagSelection = () => (
             tags.map(tag =>
             <PopoverWrapper key={tag.id} placement='bottom'>
                 <Tag 
-                    type={TAG_TYPES.BIG}
+                    size={TAG_SIZES.BIG}
                     color={tag.color}
                     name={tag.name}
                 /> 

@@ -1,13 +1,12 @@
 import React from 'react'
-import './TextInput.scss'
+import * as Styled from './styled'
 
 const TextInput = ({label, placeholder, value, onChange}) => (
     <>
-        {label && <label className='text-input-label'>{label}</label>}
-        <input 
+        {label && <Styled.Label>{label}</Styled.Label>}
+        <Styled.Input 
             type='text' 
             placeholder={placeholder} 
-            className='text-input'
             value={value}
             onChange={onChange} 
         />

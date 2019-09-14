@@ -1,6 +1,6 @@
 import React from 'react'
-import './TitleWithIcon.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import * as Styled from './styled'
 
 export const TITLE_SIZE = {
     BIG: 'big',
@@ -8,10 +8,12 @@ export const TITLE_SIZE = {
 }
 
 const TitleWithIcon = ({title, icon, size}) => (
-    <div className='title-with-icon'>
-        <FontAwesomeIcon icon={icon}  className='icon' />
-        <p className={`title ${size}`}>{title}</p>
-    </div>
+    <Styled.TitleWrapper>
+        <Styled.IconWrapper>
+            <FontAwesomeIcon icon={icon} />
+        </Styled.IconWrapper>
+        <Styled.Title size={size}>{title}</Styled.Title>
+    </Styled.TitleWrapper>
 )
 
 export default TitleWithIcon
