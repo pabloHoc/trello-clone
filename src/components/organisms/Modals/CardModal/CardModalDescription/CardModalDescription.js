@@ -1,9 +1,10 @@
 import React from 'react'
-import {faAlignLeft} from '@fortawesome/free-solid-svg-icons'
-import TitleWithIcon, {TITLE_SIZE} from 'components/atoms/TitleWithIcon/TitleWithIcon'
+import { faAlignLeft } from '@fortawesome/free-solid-svg-icons'
+import TitleWithIcon, { TITLE_SIZE } from 'components/atoms/TitleWithIcon/TitleWithIcon'
 import AddInputWithToggle from 'components/molecules/AddInputWithToggle/AddInputWithToggle'
-import {BUTTON_TYPES, BUTTON_SIZES} from 'components/atoms/Button/Button'
-import './CardModalDescription.scss';
+import { BUTTON_TYPES, BUTTON_SIZES } from 'components/atoms/Button/Button'
+import { DescriptionBox } from './styled'
+import withWrapper from 'helpers/withWrapper'
 
 const CardModalDescription = ({description, onEditDescription}) => (
     <>
@@ -16,9 +17,9 @@ const CardModalDescription = ({description, onEditDescription}) => (
             buttonText='Editar descripción'
             onAddValue={onEditDescription}
         >
-            <div className='description-box'>{description || 'Añadir una descripción más detallada...'}</div>
+            <DescriptionBox>{description || 'Añadir una descripción más detallada...'}</DescriptionBox>
         </AddInputWithToggle>
     </>
 )
 
-export default CardModalDescription
+export default withWrapper(CardModalDescription)

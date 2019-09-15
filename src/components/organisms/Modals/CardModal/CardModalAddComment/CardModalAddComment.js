@@ -1,8 +1,9 @@
 import React from 'react'
-import {faComment} from '@fortawesome/free-regular-svg-icons'
-import TitleWithIcon, {TITLE_SIZE} from 'components/atoms/TitleWithIcon/TitleWithIcon'
+import { faComment } from '@fortawesome/free-regular-svg-icons'
+import TitleWithIcon, { TITLE_SIZE } from 'components/atoms/TitleWithIcon/TitleWithIcon'
 import AddInputWithToggle from 'components/molecules/AddInputWithToggle/AddInputWithToggle'
-import {BUTTON_TYPES} from 'components/atoms/Button/Button'
+import { BUTTON_TYPES } from 'components/atoms/Button/Button'
+import withWrapper from 'helpers/withWrapper'
 
 const CardModalAddComment = ({onAddComment}) => (
     <>  
@@ -18,4 +19,4 @@ const CardModalAddComment = ({onAddComment}) => (
     </>        
 )
 
-export default CardModalAddComment
+export default withWrapper(CardModalAddComment)

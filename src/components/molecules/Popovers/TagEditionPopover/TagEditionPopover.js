@@ -1,7 +1,6 @@
 import React from 'react'
 import Popover from 'components/molecules/Popovers/Popover/Popover'
 import Button, { BUTTON_TYPES } from 'components/atoms/Button/Button'
-import './TagEditionPopover.scss'
 import TextInput from 'components/atoms/TextInput/TextInput';
 
 export const TAG_ACTION = {

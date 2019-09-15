@@ -1,6 +1,6 @@
-@import 'styles/abstract/colors';
+import styled from 'styled-components/macro'
 
-.description-box {
+export const DescriptionBox = styled.div`
     background-color: rgba(9,30,66,.04);
     box-shadow: none;
     border: none;
@@ -9,12 +9,12 @@
     min-height: 40px;
     padding: 8px 12px;
     text-decoration: none;
-    color: $primary-font-color;
+    color: ${({theme}) => theme.primaryFontColor};
     cursor: pointer;
     
-    &:hover {
+    :hover {
         background-color: rgba(9,30,66,.08);
         box-shadow: none;
         border: none;
     }
-}
+`

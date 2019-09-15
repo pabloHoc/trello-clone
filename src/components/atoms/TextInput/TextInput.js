@@ -1,4 +1,5 @@
 import React from 'react'
+import withWrapper from 'helpers/withWrapper'
 import { Label, Input } from './styled'
 
 const TextInput = ({label, placeholder, value, onChange}) => (
@@ -13,4 +14,4 @@ const TextInput = ({label, placeholder, value, onChange}) => (
     </>
 )
 
-export default TextInput
+export default withWrapper(TextInput)

@@ -1,13 +1,9 @@
-import React from 'react';
+import React from 'react'
 import { faStickyNote } from '@fortawesome/free-regular-svg-icons'
-import { faList } from '@fortawesome/free-solid-svg-icons'
 import Modal from 'components/molecules/Modal/Modal'
 import EditCardModalActions from './CardModalActions/CardModalActions'
-import CardModalDescription from './CardModalDescription/CardModalDescription'
-import CardModalAddComment from './CardModalAddComment/CardModalAddComment'
-import TitleWithIcon, {TITLE_SIZE} from 'components/atoms/TitleWithIcon/TitleWithIcon'
-import CommentList from 'components/molecules/Comment/CommentList'
-import './CardModal.scss'
+import TitleWithIcon, { TITLE_SIZE } from 'components/atoms/TitleWithIcon/TitleWithIcon'
+import { Wrapper, InnerWrapper, Description, AddComment, Comments } from './styled'
 
 const CardModal = ({
     onClose,
@@ -16,29 +12,18 @@ const CardModal = ({
     onEditDescription,
     onAddComment}) => (
     <Modal onClose={onClose}>
-        <div className='modal-header'>
-            <TitleWithIcon icon={faStickyNote} title='Titulo' size={TITLE_SIZE.BIG} />
-        </div>
-        <div className='modal-body'>
-            <div className='main-content'>
-                <div className='control-section'>
-                    <CardModalDescription 
-                        description={description}
-                        onEditDescription={onEditDescription}
-                    />
-                </div>
-                <div className='control-section'>
-                    <CardModalAddComment 
-                        onAddComment={onAddComment}
-                    />
-                </div>    
-                <div className='control-section'> 
-                    <TitleWithIcon icon={faList} title='Actividad' size={TITLE_SIZE.MEDIUM} />
-                    <CommentList comments={comments} />
-                </div>
-            </div>
+        <TitleWithIcon icon={faStickyNote} title='Titulo' size={TITLE_SIZE.BIG} />
+        <Wrapper>
+            <InnerWrapper>
+                <Description 
+                    description={description}
+                    onEditDescription={onEditDescription}
+                />
+                <AddComment onAddComment={onAddComment}/>
+                <Comments comments={comments} />
+            </InnerWrapper>
             <EditCardModalActions />
-        </div>
+        </Wrapper>
     </Modal>
 )
 

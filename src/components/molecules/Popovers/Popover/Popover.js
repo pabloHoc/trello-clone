@@ -1,19 +1,17 @@
 import React from 'react'
 import CloseButton from 'components/atoms/CloseButton/CloseButton';
-import './Popover.scss'
+import { Wrapper, Header, Title, Body } from './styled'
 
 const Popover = ({title, children}) => (
-    <div className='popover'>
+    <Wrapper>
         <CloseButton />
-        <div className='popover-header'>
-            <div className='popover-header-title'>
-                {title}
-            </div>
-        </div>
-        <div className='popover-body'>
+        <Header>
+            <Title>{title}</Title>
+        </Header>
+        <Body>
             {children}
-        </div>
-    </div>
+        </Body>
+    </Wrapper>
 )
 
-export default Popover;
+export default Popover

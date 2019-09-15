@@ -1,14 +1,14 @@
 import React from 'react'
 import CloseButton from 'components/atoms/CloseButton/CloseButton'
-import './Modal.scss'
+import { Overlay, Wrapper } from './styled'
 
 const Modal = ({children, onClose}) => (
-    <div className='overlay'>
-        <div className='modal'>
+    <Overlay>
+        <Wrapper>
             <CloseButton onClose={onClose} />
             {children}
-        </div>
-    </div>
+        </Wrapper>
+    </Overlay>
 )
 
-export default Modal;
+export default Modal

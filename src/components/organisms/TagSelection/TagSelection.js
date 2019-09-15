@@ -1,14 +1,14 @@
 import React from 'react'
-import Tag, {TAG_SIZES} from 'components/molecules/Tag/Tag'
-import Button, { BUTTON_TYPES, BUTTON_SIZES } from 'components/atoms/Button/Button'
 import * as PopoverWrapper from 'react-awesome-popover'
+import Tag, {TAG_SIZES} from 'components/molecules/Tag/Tag'
+import { BUTTON_TYPES, BUTTON_SIZES } from 'components/atoms/Button/Button'
 import TagEditionPopover, { TAG_ACTION } from 'components/molecules/Popovers/TagEditionPopover/TagEditionPopover'
-import './TagSelection.scss'
+import { Wrapper, TextInput, Button } from './styled'
 import tags from 'tags'
-import TextInput from 'components/atoms/TextInput/TextInput';
+
 
 const TagSelection = () => (
-    <div className='tags'>
+    <Wrapper>
         <TextInput placeholder='Buscar etiquetas...' />
         {
             tags.map(tag =>
@@ -31,7 +31,7 @@ const TagSelection = () => (
             />
             <TagEditionPopover action={TAG_ACTION.CREATE} />
         </PopoverWrapper>                
-    </div>  
+    </Wrapper>  
 )
 
 export default TagSelection

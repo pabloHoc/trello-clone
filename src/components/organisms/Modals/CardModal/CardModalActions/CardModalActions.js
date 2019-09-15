@@ -1,12 +1,12 @@
 import React from 'react'
-import './CardModalActions.scss'
-import {faTag, faArrowRight, } from '@fortawesome/free-solid-svg-icons'
-import {faUser, faCheckSquare, faCopy, faTrashAlt} from '@fortawesome/free-regular-svg-icons'
+import { faTag, faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faCheckSquare, faCopy, faTrashAlt } from '@fortawesome/free-regular-svg-icons'
 import ButtonGroup from 'components/molecules/ButtonGroup/ButtonGroup'
-import Button, {BUTTON_TYPES, BUTTON_SIZES} from 'components/atoms/Button/Button'
+import Button, { BUTTON_TYPES, BUTTON_SIZES } from 'components/atoms/Button/Button'
+import { Wrapper } from './styled'
 
 const CardModalActions = () => (
-    <div className='buttons-container'>
+    <Wrapper>
         <ButtonGroup title='Añadir a la tarjeta'>
             <Button type={BUTTON_TYPES.DEFAULT} size={BUTTON_SIZES.EXPAND} text='Miembros' icon={faUser} />
             <Button type={BUTTON_TYPES.DEFAULT} size={BUTTON_SIZES.EXPAND} text='Etiquetas' icon={faTag} />
@@ -17,7 +17,7 @@ const CardModalActions = () => (
             <Button type={BUTTON_TYPES.DEFAULT} size={BUTTON_SIZES.EXPAND} text='Copiar' icon={faCopy} />
             <Button type={BUTTON_TYPES.DEFAULT} size={BUTTON_SIZES.EXPAND} text='Archivar' icon={faTrashAlt} />
         </ButtonGroup>
-    </div>
+    </Wrapper>
 )
 
 export default CardModalActions

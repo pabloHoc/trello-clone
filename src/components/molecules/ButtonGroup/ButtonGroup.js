@@ -1,11 +1,11 @@
 import React from 'react'
-import './ButtonGroup.scss'
+import { Wrapper, Title } from './styled'
 
-const ButtonGroup = props => (
-    <div className='button-group'>
-        <h3 className='title'>{props.title}</h3>
-        {props.children}
-    </div>
+const ButtonGroup = ({title, children}) => (
+    <Wrapper>
+        <Title>{title}</Title>
+        {children}
+    </Wrapper>
 )
 
 export default ButtonGroup

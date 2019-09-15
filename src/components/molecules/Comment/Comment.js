@@ -1,15 +1,15 @@
 import React from 'react'
-import './Comment.scss'
+import { Wrapper, Username, Text, Actions, Action } from './styled'
 
 const Comment = ({username, text}) => (
-    <div className='comment'>
-        <b className='username'>{username}</b>
-        <div className='comment-text'>{text}</div>
-        <div className='comment-actions'>
-            <a href='#!' className='comment-action'>Editar</a>
-            <a href='#!' className='comment-action'>Eliminar</a>
-        </div>
-    </div>
+    <Wrapper>
+        <Username>{username}</Username>
+        <Text>{text}</Text>
+        <Actions>
+            <Action href='#!'>Editar</Action>
+            <Action href='#!'>Eliminar</Action>
+        </Actions>
+    </Wrapper>
 )
 
 export default Comment
