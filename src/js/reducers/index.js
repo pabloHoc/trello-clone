@@ -1,24 +1,8 @@
-import { ADD_COLUMN, ADD_CARD } from 'js/constants/action-types'
+import { combineReducers } from 'redux'
+import cards from './cards'
+import columns from './columns'
 
-const initialState = {
-    columns: [],
-    cards: []
-};
-
-const rootReducer = (state = initialState, action) => {
-    switch (action.type) {
-        case ADD_COLUMN:
-            return {
-                ...state,
-                columns: [...state.columns, action.payload]
-            }
-        case ADD_CARD:
-            return {
-                ...state,
-                cards: [...state.cards, action.payload]
-            }
-    }
-    return state;
-};
-
-export default rootReducer;
+export default combineReducers({
+  cards,
+  columns
+})

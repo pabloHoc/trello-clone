@@ -2,8 +2,8 @@ import React from 'react'
 import { connect } from 'react-redux'
 import Column from 'components/organisms/Column/Column'
 
-const mapStateToProps = state => {
-    return { columns: state.columns }
+const mapStateToProps = ({columns}) => {
+    return { columns }
 }
 
 const ConnectedList = ({columns}) => (

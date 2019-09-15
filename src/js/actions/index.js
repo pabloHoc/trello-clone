@@ -1,9 +1,13 @@
-import { ADD_COLUMN, ADD_CARD } from 'js/constants/action-types'
+import * as ACTION from 'js/constants/action-types'
 
 export const addColumn = payload => {
-    return { type: ADD_COLUMN, payload }
+    return { type: ACTION.ADD_COLUMN, payload }
 }
 
 export const addCard = payload => {
-    return { type: ADD_CARD, payload }
+    return { type: ACTION.ADD_CARD, payload }
+}
+
+export const togglePanel = () => {
+    return { type: ACTION.TOGGLE_PANEL }
 }
