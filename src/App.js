@@ -1,7 +1,7 @@
 import React from 'react'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
-import Home from 'components/pages/Home'
-import DashboardView from 'components/pages/DashboardView'
+import Home from 'components/pages/home'
+import DashboardView from 'components/pages/dashboard'
 
 const App = () => (
     <DashboardView />
