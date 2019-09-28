@@ -1,10 +1,10 @@
 import React from 'react'
-import CloseButton from 'components/atoms/close-button/close-button';
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import * as S from './popover.styled'
 
 const Popover = ({title, children}) => (
     <S.Wrapper>
-        <CloseButton />
+        <S.CloseButton icon={faTimes} />
         <S.Header>
             <S.Title>{title}</S.Title>
         </S.Header>

@@ -1,39 +1,30 @@
 import React from 'react'
-import Button, { BUTTON_SIZES, BUTTON_TYPES } from 'components/atoms/button/button'
-import { faHome, faChalkboard, faBars } from '@fortawesome/free-solid-svg-icons'
+import Button from 'components/atoms/button'
 import { PanelContextConsumer } from 'components/Contexts/PanelContext'
 import { withRouter } from 'react-router-dom'
-import * as S from './navbar.styled'
+import { Wrapper, FlexWrapper, HomeButton, PanelButton, ChalkboardIcon, HomeIcon, BarsIcon } from './navbar.styled'
 
 const Navbar = props => (
-    <S.Wrapper>
-        <S.FlexWrapper>
-            <Button 
-                type={BUTTON_TYPES.LIGHT} 
-                size={BUTTON_SIZES.ICON} 
-                icon={faHome}
-                onClick={() => props.history.push('/home')} 
-            />
-            <Button 
-                type={BUTTON_TYPES.LIGHT} 
-                size={BUTTON_SIZES.SHRINK} 
-                icon={faChalkboard}
-                text='Tableros' 
-            />
-        </S.FlexWrapper>
+    <Wrapper>
+        <FlexWrapper>
+            <HomeButton light shrink onClick={() => props.history.push('/home')}>
+                <HomeIcon />
+            </HomeButton>
+            <Button light>
+                <ChalkboardIcon />
+                Tableros
+            </Button>
+        </FlexWrapper>
         <PanelContextConsumer>
         {
             ({openPanel}) => (
-                <Button 
-                    type={BUTTON_TYPES.LIGHT} 
-                    size={BUTTON_SIZES.ICON} 
-                    icon={faBars}
-                    onClick={openPanel}
-                />
+                <PanelButton light shrink onClick={openPanel} >
+                    <BarsIcon />
+                </PanelButton>
             )
-        }    
+        }
         </PanelContextConsumer>
-    </S.Wrapper>
+    </Wrapper>
 )
 
 export default Navbar

@@ -1,6 +1,6 @@
 import React from 'react'
 import Popover from 'components/molecules/popovers/popover/popover'
-import Button, { BUTTON_TYPES } from 'components/atoms/button/button'
+import Button from 'components/atoms/button'
 import TextInput from 'components/atoms/textinput/textinput'
 
 export const TAG_ACTION = {
@@ -16,10 +16,10 @@ export const TAG_ACTION = {
     }
 }
 
-const TagEditionPopover = ({action}) => (
-    <Popover title={action.title}>
+const TagEditionPopover = ({action: {title, action}}) => (
+    <Popover title={title}>
         <TextInput label='Nombre' />
-        <Button type={BUTTON_TYPES.PRIMARY} text={action.button}/>
+        <Button primary>{action}</Button>
     </Popover>
 )
 

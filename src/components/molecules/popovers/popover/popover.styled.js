@@ -1,4 +1,6 @@
 import styled from 'styled-components/macro'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import * as Shared from 'styles/shared'
 
 export const Wrapper = styled.div`
     background: #fff;
@@ -35,4 +37,8 @@ export const Title = styled.div`
 
 export const Body = styled.div`
     padding: 0 12px 12px;
+`
+
+export const CloseButton = styled(FontAwesomeIcon)`
+    ${Shared.closeButton}
 `

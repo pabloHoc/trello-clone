@@ -1,15 +1,12 @@
-@import 'styles/abstract/colors';
-@import 'styles/abstract/effects';
-
 .card {
     border-radius: 5px;
     background-color: white;
-    color: $primary-font-color;
+    // color: $primary-font-color;
     margin: 8px 0;
     padding: 8px 12px;
     cursor: pointer;
     position: relative;
-    @include box-shadow;
+    // @include box-shadow;
     
     p {
         word-break: break-all;

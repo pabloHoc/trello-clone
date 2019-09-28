@@ -1,14 +1,14 @@
 import React from 'react'
-import CloseButton from 'components/atoms/close-button/close-button'
-import { Overlay, Wrapper } from './modal.styled'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import * as S from './modal.styled'
 
 const Modal = ({children, onClose}) => (
-    <Overlay>
-        <Wrapper>
-            <CloseButton onClose={onClose} />
+    <S.Overlay>
+        <S.Wrapper>
+            <S.CloseButton icon={faTimes} onClick={onClose} />
             {children}
-        </Wrapper>
-    </Overlay>
+        </S.Wrapper>
+    </S.Overlay>
 )
 
 export default Modal

@@ -1,5 +1,5 @@
 import React from 'react'
-import Button, {BUTTON_TYPES, BUTTON_SIZES} from 'components/atoms/button/button'
+import Button from 'components/atoms/button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import * as S from './add-input-with-toggle.styled'
@@ -28,8 +28,8 @@ class AddInputWithToggle extends React.Component {
         const {
             type = 'text',
             placeholder,
-            buttonType = BUTTON_TYPES.PRIMARY,
-            buttonSize = BUTTON_SIZES.SHRINK,
+            buttonType,
+            buttonSize,
             buttonText,
             children,
             hasToggle = true} = this.props
@@ -45,12 +45,10 @@ class AddInputWithToggle extends React.Component {
                             onChange={this.onChange} 
                         />
                         <S.FlexWrapper>
-                            <Button 
-                                type={buttonType} 
-                                size={buttonSize} 
-                                text={buttonText}
-                                onClick={this.onAddValue} 
-                            />
+                            <Button primary onClick={this.onAddValue} 
+                            >
+                                {buttonText}
+                            </Button>
                             {
                                 hasToggle &&
                                 <S.IconWrapper>
